@@ -1,0 +1,10 @@
+SQL Creating:
+------------------------------------------
+python manage.py sqlmigrate survey 0001
+
+BEGIN;
+--
+-- Create model SurveyQuestion
+--
+CREATE TABLE "survey_survey" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "respondent" varchar(100) NOT NULL);
+COMMIT;

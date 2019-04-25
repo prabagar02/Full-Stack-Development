@@ -1,0 +1,16 @@
+Facilitor addition
+--------------------
+Added a new facilator named test1 that is not able to modify the questions like admin.
+Username: test
+password: test
+email: test1@gmail.com
+
+SQL Script:
+from django.contrib.auth.models import User 
+user = User.objects.get(username="test")
+user.is_staff = True
+user.is_admin = False
+user.save()
+
+when user logs in admin panel it will say test has no access to view anything 
+since admin status is set to False.
